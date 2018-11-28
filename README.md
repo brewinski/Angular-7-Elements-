@@ -33,3 +33,11 @@ Run `git clone https://github.com/brewinski/Angular-7-Elements-POC.git` then int
 
 Run `npm install`
 
+The library needs to be built into the `dist` folder. building the library allows it to behave as if it were an npm package.
+
+To build the library,
+
+Run `ng build made-with-love`
+
+Run ng serve
+
