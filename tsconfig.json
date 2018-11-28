@@ -17,6 +17,22 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "form": [
+        "dist/form"
+      ],
+      "form/*": [
+        "dist/form/*"
+      ],
+      "made-with-love": [
+        "dist/made-with-love",
+        "dist/made-with-love"
+      ],
+      "made-with-love/*": [
+        "dist/made-with-love/*",
+        "dist/made-with-love/*"
+      ]
+    }
   }
 }
