@@ -31,6 +31,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Run `git clone https://github.com/brewinski/Angular-7-Elements-POC.git` then into `cd ./Angular-7-Elements-POC`
 
+Run `nvm use` if you don't have the required node version installed run `nvm install`
+
+Installl the latest version of angular CLI globally `npm install @angular/cli@^7.1.0`
+
 Run `npm install`
 
 The library needs to be built into the `dist` folder. building the library allows it to behave as if it were an npm package.
