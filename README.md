@@ -33,7 +33,7 @@ Run `git clone https://github.com/brewinski/Angular-7-Elements-POC.git` then int
 
 Run `nvm use` if you don't have the required node version installed run `nvm install`
 
-Installl the latest version of angular CLI globally `npm install @angular/cli@^7.1.0`
+Installl the latest version of angular CLI globally `npm install -g @angular/cli@^7.1.0`
 
 Run `npm install`
 
