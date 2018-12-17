@@ -1,11 +1,13 @@
+@import '../../styles/variables';
+
 :host {
   display: inline-block;
 
   button {
-    background-color: #727272;
-    border: 1px solid #212121;
+    background-color: $grey-3;
+    border: 1px solid $black-2;
     margin: 0;
-    color: #FFFFFF;
+    color: $white-1;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-align: center;
@@ -32,57 +34,57 @@
     &:last-of-type {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
-      border-right: 1px solid #212121;
+      border-right: 1px solid $black-2;
     }
 
 
   }
 
   button.primary {
-    background-color: #727272;
+    background-color: $grey-3;
 
     &:hover {
-      background-color: #4D4D4D;
+      background-color: $grey-1;
     }
 
     &:active {
-      background-color: #1A1A1A;
+      background-color: $black-3;
       border: none;
     }
 
     &:focus {
-      border: 2px solid rgba(255,255,255,0.5);
-      background-color: #212121;
+      border: 2px solid $opa-1;
+      background-color: $black-2;
       outline: none;
     }
 
     &:disabled {
-      background-color: #BCBCBC;
+      background-color: $grey-2;
     }
   }
 
   button.secondary {
-    background-color: #FFFFFF;
-    color: #212121;
+    background-color: $white-1;
+    color: $black-2;
 
     &:hover {
-      background-color: #F7F7F7;
+      background-color: $grey-3;
     }
 
     &:active {
-      background-color: #F2F2F2;
+      background-color: $white-2;
       border: none;
     }
 
     &:focus {
-      border: 2px solid #727272;
+      border: 2px solid $grey-3;
       box-sizing: border-box;
-      background-color: #F2F2F2;
+      background-color: $white-2;
       outline: none;
     }
 
     &:disabled {
-      background-color: #FFFFFF;
+      background-color: $white-1;
     }
   }
 }

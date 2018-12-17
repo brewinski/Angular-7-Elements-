@@ -1,12 +1,14 @@
+@import '../../styles/variables';
+
 :host {
   display: inline-block;
 
   button {
     border: none;
-    background-color: #212121;
+    background-color: $black-2;
     border-radius: 3px;
     margin: 0;
-    color: #FFFFFF;
+    color: $white-1;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-align: center;
@@ -22,73 +24,69 @@
     }
 
     &:hover {
-      background-color: #4D4D4D;
+      background-color: $grey-1;
     }
 
     &:active {
-      background-color: #1A1A1A;
-      border: none;
+      background-color: $black-3;
     }
 
     &:focus {
-      border: 2px solid rgba(255,255,255,0.5);
-      box-sizing: border-box;
-      background-color: #212121;
+      box-shadow: inset 0px 0px 0px 2px $opa-1;
+      background-color: $black-2;
       outline: none;
     }
 
     &:disabled {
-      background-color: #BCBCBC;
+      background-color: $grey-2;
     }
   }
 
   button.primary {
-    background-color: #727272;
+    background-color: $grey-3;
 
     &:hover {
-      background-color: #8E8E8E;
+      background-color: $grey-4;
     }
 
     &:active {
-      background-color: #5B5B5B;
-      border: none;
+      background-color: $grey-5;
     }
 
     &:focus {
-      border: 2px solid rgba(255,255,255,0.5);
-      box-sizing: border-box;
-      background-color: #727272;
+      box-shadow: inset 0px 0px 0px 2px $opa-1;
+      background-color: $grey-3;
       outline: none;
     }
 
     &:disabled {
-      background-color: #D4D4D4;
+      background-color: $grey-6;
     }
   }
 
   button.secondary {
-    background-color: #FFFFFF;
+    background-color: $white-1;
     color: #212121;
-    border: 1px solid #727272;
+    box-shadow: inset 0px 0px 0px 1px $grey-3;
 
     &:hover {
-      background-color: #F7F7F7;
+      background-color: $grey-7;
     }
 
     &:active {
-      background-color: #F2F2F2;
-      border: none;
+      background-color: $white-2;
     }
 
     &:focus {
-      border: 2px solid #727272;
-      box-sizing: border-box;
-      background-color: #F2F2F2;
+      box-shadow: inset 0px 0px 0px 2px $grey-3;
+      background-color: $white-1;
       outline: none;
     }
 
     &:disabled {
-      background-color: #FFFFFF;
+      background-color: $white-1;
+      color: $grey-8;
+      box-shadow: inset 0px 0px 0px 1px $grey-8;
     }
   }
 }
