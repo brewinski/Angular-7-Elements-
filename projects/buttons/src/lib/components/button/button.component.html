@@ -1,5 +1,7 @@
 <button
   type="button"
-  [class.primary]="type === 'primary'">
+  [disabled]="disabled"
+  [class.primary]="type === 'primary'"
+  [class.secondary]="type === 'secondary'">
   {{ name }}
 </button>
