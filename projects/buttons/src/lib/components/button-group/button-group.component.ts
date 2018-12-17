@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'cns-button-group',
   templateUrl: './button-group.component.html',
-  styleUrls: ['./button-group.component.scss']
+  styleUrls: ['./button-group.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class ButtonGroupComponent implements OnInit {
-
-  constructor() { }
+  @Input() public type: string;
+  @Input() public data: string[];
 
   ngOnInit() {
   }
