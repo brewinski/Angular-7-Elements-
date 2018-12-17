@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Type } from '../../interfaces/index';
 
 /**
  * @description test desc for l;skjdfsw
@@ -35,6 +36,7 @@ export class MadeWithLoveComponent implements OnInit {
   @Input() public url: string;
   @Input() public color = 'red';
   @Input() public size = 1;
+  @Input() public type: Type;
 
   ngOnInit() {
     if (!this.name || this.name.length === 0) {
