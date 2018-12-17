@@ -7,10 +7,10 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class ButtonGroupComponent implements OnInit {
-  @Input() public type: string;
+  @Input() public type: 'primary' | 'secondary' | 'default' = 'default';
   @Input() public data: string[];
+  @Input() public disabled = false;
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

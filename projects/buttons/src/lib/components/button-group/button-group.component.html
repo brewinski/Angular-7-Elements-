@@ -1,5 +1,8 @@
 <ng-container *ngFor="let btn of data">
-  <button type="button">
+  <button
+    type="button"
+    [class.primary]="type === 'primary'"
+    [class.secondary]="type === 'secondary'">
     {{ btn }}
   </button>
 </ng-container>
