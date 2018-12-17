@@ -32,6 +32,12 @@
       "made-with-love/*": [
         "dist/made-with-love/*",
         "dist/made-with-love/*"
+      ],
+      "banner-test": [
+        "dist/banner-test"
+      ],
+      "banner-test/*": [
+        "dist/banner-test/*"
       ]
     }
   }
