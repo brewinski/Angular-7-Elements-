@@ -20,9 +20,11 @@
     ],
     "paths": {
       "form": [
+        "dist/form",
         "dist/form"
       ],
       "form/*": [
+        "dist/form/*",
         "dist/form/*"
       ],
       "made-with-love": [
