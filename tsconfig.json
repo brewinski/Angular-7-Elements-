@@ -26,11 +26,9 @@
         "dist/form/*"
       ],
       "made-with-love": [
-        "dist/made-with-love",
         "dist/made-with-love"
       ],
       "made-with-love/*": [
-        "dist/made-with-love/*",
         "dist/made-with-love/*"
       ],
       "banner-test": [
@@ -38,6 +36,12 @@
       ],
       "banner-test/*": [
         "dist/banner-test/*"
+      ],
+      "buttons": [
+        "dist/buttons"
+      ],
+      "buttons/*": [
+        "dist/buttons/*"
       ]
     }
   }

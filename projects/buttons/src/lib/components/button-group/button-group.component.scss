@@ -1,0 +1,30 @@
+:host {
+  display: inline-block;
+
+  button {
+    background-color: #727272;
+    border: 1px solid #212121;
+    padding: 13px 16px;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+
+    &:first-of-type {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    &:not(&:first-of-type):not(&:last-of-type) {
+      border-right: none;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border-right: 1px solid #212121;
+    }
+  }
+}
