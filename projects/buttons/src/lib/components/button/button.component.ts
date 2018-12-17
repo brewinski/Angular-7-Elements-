@@ -11,7 +11,5 @@ export class ButtonComponent implements OnInit {
   @Input() public type: 'primary' | 'secondary' | 'default' = 'default';
   @Input() public disabled = false;
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 }
