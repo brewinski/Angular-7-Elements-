@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-components-lib-poc';
+  data = ['Item left', 'Item middle', 'Item right'];
 }
