@@ -8,11 +8,8 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() public name: string;
-  @Input() public type: string;
+  @Input() public type: 'primary' | 'secondary' | 'default' = 'default';
+  @Input() public disabled = false;
 
-  ngOnInit() {
-    if (!this.name || this.name.length === 0) {
-      console.error(`Name attribute must be provided!`);
-    }
-  }
+  ngOnInit() { }
 }
