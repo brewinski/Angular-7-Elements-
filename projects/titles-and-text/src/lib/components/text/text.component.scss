@@ -1,0 +1,48 @@
+@import '../styles/global';
+
+p {
+  font-family: $font-regular;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+
+  @media (min-width: 420px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+span.body {
+  color: $color-ink;
+}
+
+span.subdued {
+  color: $color-subdued;
+}
+
+span.disabled {
+  color: $color-disabled;
+}
+
+span.reversed {
+  color: $color-white;
+  background-color: $color-disabled;
+  padding: 1px 10px;
+  border-radius: 3px;
+}
+
+span.capitalize {
+  text-transform: capitalize;
+}
+
+span.uppercase {
+  text-transform: uppercase;
+}
+
+span.lowercase {
+  text-transform: lowercase;
+}
+
+span.italic {
+  font-style: italic;
+}

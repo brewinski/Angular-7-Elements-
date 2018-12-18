@@ -210,6 +210,41 @@
           }
         }
       }
+    },
+    "titles-and-text": {
+      "root": "projects/titles-and-text",
+      "sourceRoot": "projects/titles-and-text/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/titles-and-text/tsconfig.lib.json",
+            "project": "projects/titles-and-text/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/titles-and-text/src/test.ts",
+            "tsConfig": "projects/titles-and-text/tsconfig.spec.json",
+            "karmaConfig": "projects/titles-and-text/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/titles-and-text/tsconfig.lib.json",
+              "projects/titles-and-text/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "web-components-lib-poc",

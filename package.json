@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "nodemon -w ./projects -w ./src -e ts --exec 'ng build made-with-love; ng build buttons; ng serve'",
+    "watch": "nodemon -w ./projects -w ./src -e ts --exec 'ng build made-with-love; ng build buttons; ng build titles-and-text; ng serve'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

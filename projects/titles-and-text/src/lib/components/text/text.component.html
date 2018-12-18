@@ -1,0 +1,13 @@
+<p>
+  <span
+    [class.body]="variation === 'body'"
+    [class.subdued]="variation === 'subdued'"
+    [class.disabled]="variation === 'disabled'"
+    [class.reversed]="variation === 'reversed'"
+    [class.capitalize]="transform === 'capitalize'"
+    [class.uppercase]="transform === 'uppercase'"
+    [class.lowercase]="transform === 'lowercase'"
+    [class.italic]="transform === 'italic'">
+    <ng-content></ng-content>
+  </span>
+</p>

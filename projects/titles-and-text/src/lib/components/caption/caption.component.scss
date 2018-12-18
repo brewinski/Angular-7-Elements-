@@ -1,0 +1,18 @@
+@import '../styles/global';
+
+p {
+  font-family: $font-regular;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  color: $color-ink;
+
+  @media (min-width: 420px) {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+span.subdued {
+  color: $color-subdued;
+}
