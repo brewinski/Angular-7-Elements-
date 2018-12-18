@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "doc": "compodoc projects -p tsconfig.json; compodoc -s"
+    "compodoc:styled": "compodoc projects -p tsconfig.json -y canstar_theme/; compodoc -s",
+    "compodoc": "compodoc projects -p tsconfig.json -c .compodocrc.json; compodoc -s"
   },
   "private": true,
   "dependencies": {

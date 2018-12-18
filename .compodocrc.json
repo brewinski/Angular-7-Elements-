@@ -1,0 +1,30 @@
+{
+  "navTabConfig": [
+    {
+      "id": "info",
+      "label": "Info"
+    },
+    {
+      "id": "readme",
+      "label": "Developer Notes"
+    },
+    {
+      "id": "source",
+      "label": "Source"
+    },
+    {
+      "id": "templateData",
+      "label": "Template Data"
+    },
+    {
+      "id": "tree",
+      "label": "Tree"
+    },
+    {
+      "id": "example",
+      "label": "Example"
+    }
+  ],
+  "theme": "postmark",
+  "includes": "projects/doc"
+}

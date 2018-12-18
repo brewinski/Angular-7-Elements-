@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitlesAndTextComponent implements OnInit {
 
+  public htmlString = '<cns-display typestyle="xlarge">DisplayXLarge</cns-display>';
+
   constructor() { }
 
   ngOnInit() {
