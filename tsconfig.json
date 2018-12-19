@@ -44,6 +44,12 @@
       ],
       "buttons/*": [
         "dist/buttons/*"
+      ],
+      "titles-and-text": [
+        "dist/titles-and-text"
+      ],
+      "titles-and-text/*": [
+        "dist/titles-and-text/*"
       ]
     }
   }
