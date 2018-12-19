@@ -211,6 +211,41 @@
         }
       }
     },
+    "form": {
+      "root": "projects/form",
+      "sourceRoot": "projects/form/src",
+      "projectType": "library",
+      "prefix": "cns",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/form/tsconfig.lib.json",
+            "project": "projects/form/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form/src/test.ts",
+            "tsConfig": "projects/form/tsconfig.spec.json",
+            "karmaConfig": "projects/form/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/form/tsconfig.lib.json",
+              "projects/form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "titles-and-text": {
       "root": "projects/titles-and-text",
       "sourceRoot": "projects/titles-and-text/src",
@@ -246,6 +281,7 @@
         }
       }
     }
+
   },
   "defaultProject": "web-components-lib-poc",
   "schematics": {
