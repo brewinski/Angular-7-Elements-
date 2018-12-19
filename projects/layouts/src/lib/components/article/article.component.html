@@ -1,0 +1,24 @@
+<div
+  class="article-box"
+  [class.full-width]="type === 'full-width'"
+  [class.flex-width]="type === 'flex-width'">
+  <div class="image-box">
+    <img src="{{imgSrc}}" />
+  </div>
+  <div class="content-box">
+    <div>
+      <ng-container *ngIf="type === 'flex-width'">
+        <cns-display typestyle="small">{{ title }}</cns-display>
+      </ng-container>
+      <ng-container *ngIf="type === 'full-width'">
+        <cns-caption variation="subdued">{{ date }}</cns-caption>
+        <cns-display typestyle="medium">{{ title }}</cns-display>
+        <cns-text variation="subdued">{{ content }}</cns-text>
+      </ng-container>
+    </div>
+    <div>
+      <hr/>
+      <a href="{{ link }}">Read more ></a>
+    </div>
+  </div>
+</div>
