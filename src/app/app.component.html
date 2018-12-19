@@ -1,11 +1,30 @@
-<made-with-love
-  name="Chris Brewin"
-  url="https://github.com/brewinski/Angular-7-Elements-POC/tree/master/src"
-  size="2">
-</made-with-love>
-
 <a routerLink="/buttons" routerLinkActive="active">Buttons</a>
+<a routerLink="/form/text-input" routerLinkActive="active">Text Input Component Text Bed</a>
+
 
 <router-outlet></router-outlet>
-
-
+<form [formGroup]="group">
+  <!-- Standard Component -->
+  <cns-text-input formControlName="text"
+                  [controlName]="text"
+                  ngDefaultControl>
+  </cns-text-input>
+  <!-- Focused Component -->
+  <cns-text-input #focusControl
+                  formControlName="text"
+                  [controlName]="text"
+                  ngDefaultControl>
+  </cns-text-input>
+  <!-- Disabled Component -->
+  <cns-text-input #disableControl
+                  formControlName="text"
+                  ngDefaultControl
+                  [attr.disabled]="disabled">
+  </cns-text-input>
+    <!-- Readonly Component -->
+  <cns-text-input #readonlyControl
+                  formControlName="text"
+                  ngDefaultControl
+                  [attr.readonly]="disabled">
+</cns-text-input>
+</form>

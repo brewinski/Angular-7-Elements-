@@ -5,9 +5,9 @@ import { ButtonsModule } from '../../projects/buttons/src/public_api';
 import { FormModule } from '../../projects/form/src/public_api';
 import { RouterModule, Routes } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {
@@ -23,10 +23,16 @@ const appRoutes: Routes = [
     BrowserModule,
     MadeWithLoveModule,
     ButtonsModule,
+    FormModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )
+  ],
+  providers: [
+    FormBuilder
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

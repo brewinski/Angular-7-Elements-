@@ -1,1 +1,6 @@
-<input value="getValue()"></input>
+<input ngDefaultControl
+       name="test"
+       type="text"
+       value="value"
+       [attr.readonly]="isReadonly()"
+       [attr.disabled]="isDisabled()" />

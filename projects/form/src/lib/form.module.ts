@@ -1,19 +1,28 @@
 import { NgModule, Injector } from '@angular/core';
-import { FormComponent } from './form.component';
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { createCustomElement } from '@angular/elements';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+interface ElementDef {
+  key: string;
+  component: any;
+}
+
+const angularElements: ElementDef[] = [
+  { key: 'cns-text-input', component: TextInputComponent }
+];
 
 @NgModule({
-  declarations: [FormComponent, TextInputComponent],
-  imports: [
-  ],
-  exports: [FormComponent],
-  entryComponents: [TextInputComponent]
+  declarations: [TextInputComponent],
+  imports: [FormsModule, ReactiveFormsModule],
+  entryComponents: [angularElements.map(elementDef => elementDef.component)]
 })
 export class FormModule {
   constructor(private injector: Injector) {
-    const textInputElement = createCustomElement(TextInputComponent, { injector });
-    customElements.define('cns-text-input', textInputElement);
+    angularElements.forEach(element => {
+      const textInputElement = createCustomElement(element.component, { injector });
+      customElements.define(element.key, textInputElement);
+    });
   }
 
   ngDoBootstrap() {}

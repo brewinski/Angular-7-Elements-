@@ -24,6 +24,5 @@ fdescribe('TextInputComponent', () => {
   });
 
   it('should use and empty string as the deafult value and accept a value as an override', () => {
-    expect(component.getValue()).toBe('');
   });
 });
