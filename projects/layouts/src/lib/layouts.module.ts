@@ -1,7 +1,6 @@
 import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { TitlesAndTextModule } from '../../../titles-and-text/src/public_api';
-import { LayoutsComponent } from './layouts.component';
 import { ArticleComponent } from './components/article/article.component';
 import { CommonModule } from '@angular/common';
 
