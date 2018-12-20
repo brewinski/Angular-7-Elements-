@@ -37,6 +37,7 @@ export class MadeWithLoveComponent implements OnInit {
   @Input() public color = 'red';
   @Input() public size = 1;
   @Input() public type: Type;
+  @Input() public buttonOption: 'primary' | 'secondary' | 'default' | 'danger' = 'default';
 
   ngOnInit() {
     if (!this.name || this.name.length === 0) {

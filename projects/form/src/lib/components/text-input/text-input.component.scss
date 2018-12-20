@@ -1,0 +1,9 @@
+@import '../../styles//partials/form-input.scss/form-input-text.scss';
+
+:host {
+  display: block;
+
+  &:focus {
+    border: 1px solid red;
+  }
+}

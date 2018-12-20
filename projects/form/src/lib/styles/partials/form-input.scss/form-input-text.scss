@@ -1,0 +1,48 @@
+/**
+ * Styles for Input Fields of Type 'text, number, textarea'
+*/
+
+@import '../../variables';
+
+
+/** State Default */
+input[type=text],
+input[type=number],
+textarea {
+  /** Screen Any */
+  border: 1px solid $colour-border-default;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid $colour-border-focus;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+  }
+
+  &:read-only {
+    background-color: $colour-background-readonly;
+  }
+
+  &:disabled {
+    background-color: $colour-background-disabled;
+    color: $colour-text-disabled;
+  }
+
+  &.error {
+    background-color: $colour-background-error;
+    border: 1px solid $colour-border-error;
+  }
+  /** Screen Small */
+
+  /** Screen Large */
+  @media (min-width: $screen-sm) {
+    color: $colour-text-default;
+    font-size: 16px;
+    height: 48px;
+    line-height: 24px;
+    padding: 12px 16px;
+  }
+}
+
