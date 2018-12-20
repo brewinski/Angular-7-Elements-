@@ -50,6 +50,12 @@
       ],
       "titles-and-text/*": [
         "dist/titles-and-text/*"
+      ],
+      "layouts": [
+        "dist/layouts"
+      ],
+      "layouts/*": [
+        "dist/layouts/*"
       ]
     }
   }

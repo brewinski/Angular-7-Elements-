@@ -1,21 +1,21 @@
 $screen-sm: 768px;
 
 /** Default Input Variables */
-$colour-border-default: #E5E5E5;
-$colour-background-default: #FFFFFF;
-$colour-text-default: #212121;
-$colour-shadow-default: rgba(0,0,0,0.05);
+$colour-border-default: #E5E5E5 !default;
+$colour-background-default: #FFFFFF !default;
+$colour-text-default: #212121 !default;
+$colour-shadow-default: rgba(0,0,0,0.05) !default;
 
 /** Focus Input Variables */
-$colour-border-focus: #727272;
+$colour-border-focus: #727272 !default;
 
 /** Readonly Input Variables */
-$colour-background-readonly: #F2F2F2;
+$colour-background-readonly: #F2F2F2 !default;
 
 /** Disabled Input Variables */
-$colour-background-disabled: #F2F2F2;
-$colour-text-disabled: #B6B6B6;
+$colour-background-disabled: #F2F2F2 !default;
+$colour-text-disabled: #B6B6B6 !default;
 
 /** Error Input Variables */
 $colour-background-error: #FBEAE5;
-$color-border-error: #DE3617;;
+$colour-border-error: #DE3617;

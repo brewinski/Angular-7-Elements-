@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +18,10 @@ export class AppComponent  implements AfterViewInit {
   public readonly = true;
 
   constructor(private fb: FormBuilder) {
-    this.group = this.fb.group({ text: 'my vlaue' });
+    this.group = this.fb.group({ text: ''});
     this.group.valueChanges.subscribe(val => console.log(val));
+    const control = this.group.get('text');
+    control.setValidators([Validators.required, Validators.minLength(10)]);
   }
 
   ngAfterViewInit() {

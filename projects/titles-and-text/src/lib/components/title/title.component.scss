@@ -1,4 +1,4 @@
-@import '../styles/global';
+@import '../../../../../shared/styles/variables';
 
 .title-heading,
 .title-subheading {
@@ -36,3 +36,10 @@
   }
 }
 
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
