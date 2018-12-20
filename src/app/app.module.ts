@@ -14,6 +14,7 @@ import { TitlesAndTextComponent } from './titles-and-text/titles-and-text.compon
 import { ArticleLayoutComponent } from './article-layout/article-layout.component';
 import { TextInputComponent } from './form/text-input/text-input.component';
 import { CalloutCardTestComponent } from './callout-card-test/callout-card-test.component';
+import { BlockComponent } from './block/block.component';
 
 const appRoutes: Routes = [
   {
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
   {
     path: 'callout-card',
     component: CalloutCardTestComponent
+  },
+  {
+    path: 'block-layout',
+    component: BlockComponent
   }
 ];
 
@@ -46,6 +51,7 @@ const appRoutes: Routes = [
     ArticleLayoutComponent,
     TextInputComponent,
     CalloutCardTestComponent,
+    BlockComponent,
   ],
   imports: [
     BrowserModule,
