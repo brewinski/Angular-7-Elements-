@@ -19,7 +19,7 @@ const angularElements: ElementDef[] = [
 })
 export class ButtonsModule {
   constructor(private injector: Injector) {
-    RegisterWebComponents(angularElements);
+    RegisterWebComponents(angularElements, injector);
   }
 
   ngDoBootstrap() {}

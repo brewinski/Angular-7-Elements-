@@ -20,7 +20,7 @@ const angularElements: any[] = [
 })
 export class LayoutsModule {
   constructor(private injector: Injector) {
-    RegisterWebComponents(angularElements);
+    RegisterWebComponents(angularElements, injector);
   }
 
   ngDoBootstrap() {}

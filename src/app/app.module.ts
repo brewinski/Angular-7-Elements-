@@ -34,7 +34,13 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ButtonsComponent, TitlesAndTextComponent, ArticleLayoutComponent, TextInputComponent, CalloutCardComponent, StatusComponent, ComponentsComponent],
+  declarations: [
+    AppComponent,
+    ButtonsComponent,
+    TitlesAndTextComponent,
+    ArticleLayoutComponent,
+    TextInputComponent,
+  ],
   imports: [
     BrowserModule,
     MadeWithLoveModule,

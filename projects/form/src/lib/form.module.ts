@@ -16,7 +16,7 @@ const angularElements: ElementDef[] = [
 })
 export class FormModule {
   constructor(private injector: Injector) {
-    RegisterWebComponents(angularElements);
+    RegisterWebComponents(angularElements, injector);
   }
 
   ngDoBootstrap() {}
