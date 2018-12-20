@@ -1,30 +1,26 @@
 import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
 import { TitlesAndTextModule } from '../../../titles-and-text/src/public_api';
 import { ArticleComponent } from './components/article/article.component';
 import { CommonModule } from '@angular/common';
+import { CalloutCardComponent } from './components/callout-card/callout-card.component';
+import { RegisterWebComponents } from '../../../shared/helpers';
 
-interface ElementDef {
-  key: string;
-  component: any;
-}
 
-const angularElements: ElementDef[] = [
-  { key: 'cns-article', component: ArticleComponent }
+
+const angularElements: any[] = [
+  { key: 'cns-article', component: ArticleComponent },
+  { key: 'cns-callout-card', component: CalloutCardComponent }
 ];
 
 @NgModule({
-  declarations: [ArticleComponent],
+  declarations: [angularElements.map(elementDef => elementDef.component)],
   imports: [CommonModule, TitlesAndTextModule],
   entryComponents: [angularElements.map(elementDef => elementDef.component)],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LayoutsModule {
   constructor(private injector: Injector) {
-    angularElements.forEach(element => {
-      const newElement = createCustomElement(element.component, { injector });
-      customElements.define(element.key, newElement);
-    });
+    RegisterWebComponents(angularElements);
   }
 
   ngDoBootstrap() {}

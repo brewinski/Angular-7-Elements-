@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-callout-card',
+  selector: 'cns-callout-card',
   templateUrl: './callout-card.component.html',
   styleUrls: ['./callout-card.component.scss']
 })
