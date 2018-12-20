@@ -2,23 +2,12 @@
   class="article-box"
   [class.full-width]="type === 'full-width'"
   [class.flex-width]="type === 'flex-width'">
-  <div class="image-box">
-    <img src="{{imgSrc}}" />
-  </div>
+  <ng-content select="article-image"></ng-content>
   <div class="content-box">
-    <div>
-      <ng-container *ngIf="type === 'flex-width'">
-        <cns-display typestyle="small">{{ title }}</cns-display>
-      </ng-container>
-      <ng-container *ngIf="type === 'full-width'">
-        <cns-caption variation="subdued">{{ date }}</cns-caption>
-        <cns-display typestyle="medium">{{ title }}</cns-display>
-        <cns-text variation="subdued">{{ content }}</cns-text>
-      </ng-container>
-    </div>
+    <ng-content select="article-content"></ng-content>
     <div>
       <hr/>
-      <a href="{{ link }}">Read more ></a>
+      <ng-content select="article-link"></ng-content>
     </div>
   </div>
 </div>

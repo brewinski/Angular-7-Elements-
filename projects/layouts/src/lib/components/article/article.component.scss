@@ -1,11 +1,5 @@
 @import '../../../../../shared/styles/variables';
 
-:host {
-  &:not(:first-of-type) {
-    padding-left: 30px;
-  }
-}
-
 .article-box {
   display: flex;
   background: #FFFFFF;
@@ -13,12 +7,15 @@
   border-radius: 8px;
   box-shadow: 0 8px 20px 0 rgba(0,0,0,0.1);
 
-  .image-box {
+  article-image {
     flex-grow: 1;
     width: 50%;
+    max-height: 346px;
   }
 
-  img {
+  img{
+    object-fit: cover;
+    overflow: hidden;
     width: 100%;
     height: 100%;
   }
@@ -28,7 +25,7 @@
     display: flex;
     flex-direction: column;
 
-    div:first-of-type {
+    article-content {
       align-self: flex-start;
       flex-grow: 2;
     }
@@ -39,16 +36,21 @@
       width: 100%;
       text-align: right;
     }
+
+    hr {
+      padding-bottom: 10px;
+      border: none;
+      border-top: 1px solid $colour-hr-article;
+    }
   }
 }
 
 .full-width {
   flex-direction: row;
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-xs-min) {
 
   }
-  height: 346px;
 
   img {
     border-top-left-radius: 8px;
@@ -56,16 +58,15 @@
   }
 
   .content-box {
-    padding: 30px;
+    padding: 15px 30px 16px 30px;
     width: calc(50% - (30px * 2));
   }
 }
 
 .flex-width {
   flex-direction: column;
-  height: 311px;
 
-  .image-box {
+  article-image {
     width: 100%;
   }
 
@@ -75,6 +76,6 @@
   }
 
   .content-box {
-    padding: 16px 16px 0 16px;
+    padding: 16px;
   }
 }

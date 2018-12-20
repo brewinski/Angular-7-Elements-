@@ -1,22 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'cns-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent {
 
-  @Input() public imgSrc = 'http://news.orgatec.de/wp-content/uploads/2016/05/laptop-mobile_BLOG.jpg';
-  @Input() public date: string;
-  @Input() public title: string;
-  @Input() public content: string;
-  @Input() public link: string;
+  placeholderImageSrc = 'https://i0.wp.com/cohenwoodworking.com/wp-content/uploads/2016/09/placeholder.jpg?ssl=1';
   @Input() public type: 'full-width' | 'flex-width' = 'full-width';
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
