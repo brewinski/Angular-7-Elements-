@@ -2,9 +2,7 @@ import { Component,
          Input,
          Output,
          EventEmitter,
-         forwardRef,
          ViewChild,
-         AfterViewInit,
          ViewEncapsulation,
 } from '@angular/core';
 import { ControlValueAccessor, DefaultValueAccessor } from '@angular/forms';
@@ -19,9 +17,9 @@ type InputType = 'text' | 'number' | 'date' | 'range' | 'password' |
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.scss'],
   providers: [getAccessValidatorProvider(TextInputComponent)],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.Emulated
 })
-export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
+export class TextInputComponent implements ControlValueAccessor {
   /**
    * @description component input value allows the user to set the defualt value and change the value as required.
    *              defualt value is an empty string;
@@ -65,11 +63,6 @@ export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
   @Output() change = new EventEmitter();
 
   @ViewChild(DefaultValueAccessor) valueAccessor: DefaultValueAccessor;
-
-  public ngAfterViewInit() {
-    console.log('value accessor', this.valueAccessor);
-    console.log(this);
-  }
 
   public writeValue(obj: any): void {
     this.valueAccessor.writeValue(obj);

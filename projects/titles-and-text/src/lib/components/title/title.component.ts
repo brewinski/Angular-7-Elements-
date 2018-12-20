@@ -11,12 +11,14 @@ export class TitleComponent implements OnInit {
   @Input() public element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'h2';
   @Input() public typestyle: 'heading' | 'subheading' = 'heading';
   @Input() public variation: 'default' | 'subdued' = 'default';
+  @Input() public weight: 'normal' | 'bolder' | 'bold' = 'bolder';
 
   @ViewChild('content') tempate: TemplateRef<ElementRef>;
 
   html = '<h1>testing</h1>';
 
   ngOnInit() {
+    console.log(this.weight)
   }
 
   getContent(): string {

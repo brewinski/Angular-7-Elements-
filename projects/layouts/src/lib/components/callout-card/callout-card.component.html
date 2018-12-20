@@ -1,0 +1,17 @@
+  <section class="title-section">
+    <div class="image-spacer">
+    <div class="default-img circular-shadow"
+         alt="default callout card image"
+         *ngIf="!img">
+    </div>
+    <img class="circular-shadow"
+         [attr.src]="img"
+         [attr.alt]="imgAlt"
+         *ngIf="img" />
+    </div>
+    <slot name="title"></slot>
+  </section>
+  <section class="content-section">
+    <slot name="body"></slot>
+    <slot name="action"></slot>
+  </section>

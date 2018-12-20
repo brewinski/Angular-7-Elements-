@@ -46,3 +46,9 @@ textarea {
   }
 }
 
+.ng-invalid{
+  input {
+    background-color: $colour-background-error;
+    border: 1px solid $colour-border-error;
+  }
+}
