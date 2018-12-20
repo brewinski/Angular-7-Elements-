@@ -23,7 +23,7 @@ const angularElements: ElementDef[] = [
 })
 export class TitlesAndTextModule {
   constructor(private injector: Injector) {
-    RegisterWebComponents(angularElements);
+    RegisterWebComponents(angularElements, injector);
   }
 
   ngDoBootstrap() {}
