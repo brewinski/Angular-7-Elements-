@@ -7,13 +7,13 @@
   border-radius: 8px;
   box-shadow: 0 8px 20px 0 rgba(0,0,0,0.1);
 
-  article-image {
+  .image-box, slot {
     flex-grow: 1;
     width: 50%;
     max-height: 346px;
   }
 
-  img{
+  img {
     object-fit: cover;
     overflow: hidden;
     width: 100%;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
 
-    article-content {
+    div:first-of-type {
       align-self: flex-start;
       flex-grow: 2;
     }
@@ -66,7 +66,7 @@
 .flex-width {
   flex-direction: column;
 
-  article-image {
+  .image-box {
     width: 100%;
   }
 

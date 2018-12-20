@@ -1,13 +1,19 @@
-<div
-  class="article-box"
-  [class.full-width]="type === 'full-width'"
-  [class.flex-width]="type === 'flex-width'">
-  <ng-content select="article-image"></ng-content>
+<div class="article-box"
+    [class.full-width]="type === 'full-width'"
+    [class.flex-width]="type === 'flex-width'">
+  <div class="image-box">
+    <img
+      [attr.src]="img" />
+  </div>
   <div class="content-box">
-    <ng-content select="article-content"></ng-content>
+    <div>
+      <slot name="article-date"></slot>
+      <slot name="article-title"></slot>
+      <slot name="article-info"></slot>
+    </div>
     <div>
       <hr/>
-      <ng-content select="article-link"></ng-content>
+      <slot name="article-link"></slot>
     </div>
   </div>
 </div>

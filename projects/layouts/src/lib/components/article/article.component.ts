@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
   selector: 'cns-article',
@@ -6,8 +6,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./article.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class ArticleComponent {
-
-  placeholderImageSrc = 'https://i0.wp.com/cohenwoodworking.com/wp-content/uploads/2016/09/placeholder.jpg?ssl=1';
+export class ArticleComponent implements OnInit {
   @Input() public type: 'full-width' | 'flex-width' = 'full-width';
+  @Input() img: string;
+
+  ngOnInit() {
+    console.log('test: ', this.img);
+  }
 }
