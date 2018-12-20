@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  border: 1px solid rgba(25,152,166,0.3);
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px 16px;
+
+
+  .default-img {
+    height: 50px;
+    width: 50px;
+    background-color: lightgray;
+  }
+
+  .image-spacer {
+    margin-right: 15px;
+  }
+
+  .circular-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    border-radius: 50%;
+  }
+
+  .title-section {
+    align-items: center;
+    display: flex;
+  }
+
+  .content-section {
+    @media (min-width: 768px) {
+      margin-left: 65px;
+    }
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+    object-fit: fill;
+  }
+}

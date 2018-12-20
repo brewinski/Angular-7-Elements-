@@ -13,6 +13,7 @@ import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TitlesAndTextComponent } from './titles-and-text/titles-and-text.component';
 import { ArticleLayoutComponent } from './article-layout/article-layout.component';
 import { TextInputComponent } from './form/text-input/text-input.component';
+import { CalloutCardTestComponent } from './callout-card-test/callout-card-test.component';
 
 const appRoutes: Routes = [
   {
@@ -30,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: 'article-layout',
     component: ArticleLayoutComponent
+  },
+  {
+    path: 'callout-card',
+    component: CalloutCardTestComponent
   }
 ];
 
@@ -40,6 +45,7 @@ const appRoutes: Routes = [
     TitlesAndTextComponent,
     ArticleLayoutComponent,
     TextInputComponent,
+    CalloutCardTestComponent,
   ],
   imports: [
     BrowserModule,
