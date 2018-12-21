@@ -18,11 +18,9 @@ export class TitleComponent implements OnInit {
   html = '<h1>testing</h1>';
 
   ngOnInit() {
-    console.log(this.weight)
   }
 
   getContent(): string {
-    console.log(this.tempate.elementRef);
     return `<${this.element}>${this.tempate.elementRef.nativeElement}</${this.element}>`;
   }
 

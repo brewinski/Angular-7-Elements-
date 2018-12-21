@@ -15,6 +15,7 @@ import { ArticleLayoutComponent } from './article-layout/article-layout.componen
 import { TextInputComponent } from './form/text-input/text-input.component';
 import { CalloutCardTestComponent } from './callout-card-test/callout-card-test.component';
 import { BlockComponent } from './block/block.component';
+import { HugPageComponent } from './mockups/hug-page/hug-page.component';
 
 const appRoutes: Routes = [
   {
@@ -40,6 +41,10 @@ const appRoutes: Routes = [
   {
     path: 'block-layout',
     component: BlockComponent
+  },
+  {
+    path: 'hub-page',
+    component: HugPageComponent
   }
 ];
 
@@ -52,6 +57,7 @@ const appRoutes: Routes = [
     TextInputComponent,
     CalloutCardTestComponent,
     BlockComponent,
+    HugPageComponent,
   ],
   imports: [
     BrowserModule,

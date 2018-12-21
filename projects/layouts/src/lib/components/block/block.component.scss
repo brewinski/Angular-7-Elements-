@@ -1,11 +1,19 @@
-.left {
-  text-align: left;
-}
+:host {
+  display: block;
 
-.centre {
-  text-align: center;
-}
+  div {
+    display: block;
+  }
 
-.right {
-  text-align: right;
+  .left {
+    text-align: left;
+  }
+
+  .centre {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
 }
