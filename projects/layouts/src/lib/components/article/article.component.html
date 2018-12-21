@@ -1,0 +1,19 @@
+<div class="article-box"
+    [class.full-width]="type === 'full-width'"
+    [class.flex-width]="type === 'flex-width'">
+  <div class="image-box">
+    <img
+      [attr.src]="img" />
+  </div>
+  <div class="content-box">
+    <div>
+      <slot name="article-date"></slot>
+      <slot name="article-title"></slot>
+      <slot name="article-info"></slot>
+    </div>
+    <div>
+      <hr/>
+      <slot name="article-link"></slot>
+    </div>
+  </div>
+</div>

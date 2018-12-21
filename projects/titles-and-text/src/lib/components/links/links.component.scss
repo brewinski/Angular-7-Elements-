@@ -1,0 +1,25 @@
+@import '../../../../../shared/styles/variables';
+
+:host {
+  display: block;
+}
+
+a {
+  font-size: 18px;
+  line-height: 18px;
+  color: $colour-font-link;
+  text-decoration: none;
+  font-family: $font-regular;
+}
+
+.big {
+
+}
+
+.small {
+
+}
+
+.greyscale {
+  color: $color-font-navbar;
+}
