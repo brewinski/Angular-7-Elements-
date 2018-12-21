@@ -1,5 +1,9 @@
 @import '../../../../../shared/styles/variables';
 
+:host {
+  display: block;
+}
+
 p {
   font-family: $font-regular;
   font-size: 15px;

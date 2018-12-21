@@ -9,6 +9,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class DisplayComponent implements OnInit {
   @Input() public typestyle: 'xlarge' | 'large' | 'medium' | 'small' = 'large';
   @Input() public variation: 'default' | 'subdued' = 'default';
+  @Input() transform: 'normal' | 'bold' = 'bold';
 
   ngOnInit() {
   }

@@ -10,7 +10,5 @@ export class ArticleComponent implements OnInit {
   @Input() public type: 'full-width' | 'flex-width' = 'full-width';
   @Input() img: string;
 
-  ngOnInit() {
-    console.log('test: ', this.img);
-  }
+  ngOnInit() { }
 }

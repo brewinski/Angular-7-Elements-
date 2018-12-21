@@ -9,8 +9,10 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class BlockComponent implements OnInit {
 
   @Input() alignment: 'left' | 'centre' | 'right' = 'centre';
+  @Input() triangle: 'both' | 'top' | 'bottom' | 'none' = 'none';
 
   ngOnInit() {
+    console.log(this.triangle)
   }
 
 }

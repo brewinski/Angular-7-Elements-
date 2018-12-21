@@ -1,3 +1,10 @@
+:host {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
 .bold-it {
   font-weight: bold;
 }
@@ -62,5 +69,34 @@
 
 .banner {
   height: 445px;
+
+  div {
+    padding: 92px 0 0 0;
+    max-width: 520px;
+  }
+}
+
+cns-block {
+  margin-top: 64px;
+}
+
+.odd-block {
+  &::before {
+    height: 220px;
+    width: 100%;
+    content: '';
+    display: block;
+    background: rgb(255,255,255);
+    background: linear-gradient(175deg, rgba(255,255,255,1) 50%, rgba(235,247,238,1) 50%);
+  }
+
+  &::after {
+    height: 220px;
+    width: 100%;
+    content: '';
+    display: block;
+    background: rgb(255,255,255);
+    background: linear-gradient(8deg, rgba(255,255,255,1) 50%, rgba(235,247,238,1) 50%);
+  }
 }
 

@@ -1,5 +1,9 @@
 @import '../../../../../shared/styles/variables';
 
+:host {
+  display: block;
+}
+
 a {
   font-size: 18px;
   line-height: 18px;

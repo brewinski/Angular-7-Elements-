@@ -1,5 +1,9 @@
 @import '../../../../../shared/styles/variables';
 
+:host {
+  display: block;
+}
+
 .display-xlarge,
 .display-large,
 .display-medium,
@@ -62,4 +66,8 @@
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+.normal-font-weight {
+  font-weight: normal;
 }

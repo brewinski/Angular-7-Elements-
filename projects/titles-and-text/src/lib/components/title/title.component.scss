@@ -1,5 +1,9 @@
 @import '../../../../../shared/styles/variables';
 
+:host {
+  display: block;
+}
+
 .title-heading,
 .title-subheading {
   color: $color-ink;
