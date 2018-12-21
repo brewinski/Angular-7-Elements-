@@ -1,7 +1,5 @@
 import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { createCustomElement } from '@angular/elements';
-
 import { ButtonComponent } from './components/button/button.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
 import { ElementDef } from 'projects/shared/interfaces';
@@ -13,14 +11,12 @@ const angularElements: ElementDef[] = [
 ];
 
 @NgModule({
-  declarations: [angularElements.map(elementDef => elementDef.component)],
+  declarations: [ButtonComponent, ButtonGroupComponent],
   imports: [CommonModule],
-  entryComponents: [angularElements.map(elementDef => elementDef.component)]
+  entryComponents: [ButtonComponent, ButtonGroupComponent]
 })
 export class ButtonsModule {
   constructor(private injector: Injector) {
     RegisterWebComponents(angularElements, injector);
   }
-
-  ngDoBootstrap() {}
 }

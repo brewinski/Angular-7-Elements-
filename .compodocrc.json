@@ -1,20 +1,21 @@
 {
+  "name": "Canstar Web Components",
   "navTabConfig": [
     {
       "id": "info",
-      "label": "Info"
+      "label": "API"
     },
     {
       "id": "readme",
-      "label": "Developer Notes"
+      "label": "Guide"
     },
     {
       "id": "source",
-      "label": "Source"
+      "label": "Typescript"
     },
     {
       "id": "templateData",
-      "label": "Template Data"
+      "label": "HTML Template"
     },
     {
       "id": "tree",
@@ -25,6 +26,8 @@
       "label": "Example"
     }
   ],
-  "theme": "postmark",
-  "includes": "projects/doc"
+  "theme": "laravel",
+  "unitTestCoverage": "coverage/coverage-summary.json",
+  "includes": "projects/doc",
+  "includesName": "Guides"
 }
