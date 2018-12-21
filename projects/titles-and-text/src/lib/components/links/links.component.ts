@@ -8,4 +8,5 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 })
 export class LinksComponent {
   @Input() href = '';
+  @Input() color: 'aqua' | 'grey' = 'aqua';
 }
