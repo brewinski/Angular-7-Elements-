@@ -215,7 +215,7 @@
       "root": "projects/titles-and-text",
       "sourceRoot": "projects/titles-and-text/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "cns",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

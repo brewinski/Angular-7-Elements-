@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'lib-text',
+  selector: 'cns-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom

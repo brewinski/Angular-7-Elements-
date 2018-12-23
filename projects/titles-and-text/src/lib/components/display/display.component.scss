@@ -1,64 +1,66 @@
 @import '../styles/global';
+@import '../../../../../'
 
-.display-xlarge,
-.display-large,
-.display-medium,
-.display-small {
-  color: $color-ink;
-  text-transform: capitalize;
-}
+:host {
+  display: block;
 
-.display-xlarge.subdued,
-.display-large.subdued,
-.display-medium.subdued,
-.display-small.subdued {
-  color: $color-subdued;
-}
-
-.display-xlarge {
-  font-family: $font-bold;
-  font-size: 27px;
-  line-height: 36px;
-  font-weight: bold;
-
-  @media (min-width: 420px) {
-    font-size: 42px;
-    line-height: 44px;
+  .display-xlarge,
+  .display-large,
+  .display-medium,
+  .display-small {
+    color: $color-ink;
+    text-transform: capitalize;
   }
-}
 
-.display-large {
-  font-family: $font-bold;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: bold;
+  .display-xlarge {
+    font-family: $font-bold;
+    font-size: 27px;
+    line-height: 36px;
+    font-weight: bold;
 
-  @media (min-width: 420px) {
-    font-size: 28px;
-    line-height: 32px;
+    @media (min-width: 420px) {
+      font-size: 42px;
+      line-height: 44px;
+    }
   }
-}
 
-.display-medium {
-  font-family: $font-regular;
-  font-size: 21px;
-  line-height: 28px;
-  font-weight: normal;
-
-  @media (min-width: 420px) {
-    font-size: 26px;
-    line-height: 32px;
-  }
-}
-
-.display-small {
-  font-family: $font-regular;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: normal;
-
-  @media (min-width: 420px) {
-    font-size: 20px;
+  .display-large {
+    font-family: $font-bold;
+    font-size: 24px;
     line-height: 28px;
+    font-weight: bold;
+
+    @media (min-width: 420px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .display-medium {
+    font-family: $font-regular;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: normal;
+
+    @media (min-width: 420px) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  .display-small {
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+
+    @media (min-width: 420px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .subdued {
+    color: $color-subdued;
   }
 }

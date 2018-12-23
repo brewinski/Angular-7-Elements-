@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewEncapsulation, ViewChild, TemplateRef, El
 import { template } from '@angular/core/src/render3';
 
 @Component({
-  selector: 'lib-title',
+  selector: 'cns-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom

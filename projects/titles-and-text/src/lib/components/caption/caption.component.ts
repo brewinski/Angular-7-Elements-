@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'lib-caption',
+  selector: 'cns-caption',
   templateUrl: './caption.component.html',
   styleUrls: ['./caption.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
