@@ -1,5 +1,4 @@
 import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TitlesAndTextModule } from '../../../titles-and-text/src/public_api';
 import { ArticleComponent } from './components/article/article.component';
 import { CommonModule } from '@angular/common';
 import { CalloutCardComponent } from './components/callout-card/callout-card.component';
@@ -13,15 +12,13 @@ const angularElements: any[] = [
 ];
 
 @NgModule({
-  declarations: [angularElements.map(elementDef => elementDef.component), BlockComponent],
-  imports: [CommonModule, TitlesAndTextModule],
-  entryComponents: [angularElements.map(elementDef => elementDef.component)],
+  declarations: [ArticleComponent, BlockComponent, CalloutCardComponent],
+  imports: [CommonModule],
+  entryComponents: [ArticleComponent, BlockComponent, CalloutCardComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LayoutsModule {
   constructor(private injector: Injector) {
     RegisterWebComponents(angularElements, injector);
   }
-
-  ngDoBootstrap() {}
 }

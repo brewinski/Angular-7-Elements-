@@ -1,5 +1,9 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
+/**
+ * Example of usage:
+ * <example-url>http://localhost:4200/titles-and-text</example-url>
+ */
 @Component({
   selector: 'lib-display',
   templateUrl: './display.component.html',

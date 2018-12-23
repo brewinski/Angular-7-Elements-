@@ -1,7 +1,5 @@
 import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { createCustomElement } from '@angular/elements';
-
 import { DisplayComponent } from './components/display/display.component';
 import { TitleComponent } from './components/title/title.component';
 import { TextComponent } from './components/text/text.component';
@@ -16,18 +14,15 @@ const angularElements: ElementDef[] = [
   { key: 'cns-text', component: TextComponent },
   { key: 'cns-caption', component: CaptionComponent },
   { key: 'cns-link', component: LinksComponent }
-
 ];
 
 @NgModule({
-  declarations: [angularElements.map(element => element.component), LinksComponent],
+  declarations: [CaptionComponent, DisplayComponent, LinksComponent, TextComponent, TitleComponent],
   imports: [CommonModule],
-  entryComponents: [angularElements.map(element => element.component)]
+  entryComponents: [CaptionComponent, DisplayComponent, LinksComponent, TextComponent, TitleComponent]
 })
 export class TitlesAndTextModule {
   constructor(private injector: Injector) {
     RegisterWebComponents(angularElements, injector);
   }
-
-  ngDoBootstrap() {}
 }
