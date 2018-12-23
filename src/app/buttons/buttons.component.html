@@ -45,3 +45,17 @@
     [data]="data">
   </cns-button-group>
 </div>
+
+<form (ngSubmit)="onSubmit()">
+  <cns-button
+    name="button"
+    action="button"
+    (btnClick)="handleClick($event)">
+  </cns-button>
+  <cns-button
+    name="submit"
+    action="submit"
+    (btnClick)="handleClick($event)">
+  </cns-button>
+  <button type="submit">submit</button>
+</form>
