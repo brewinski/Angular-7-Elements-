@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Setup",
+    "file": "setup.md"
+  },
+  {
+    "title": "Cheatsheets",
+    "file": "cheatsheets.md"
+  },
+  {
+    "title": "FAQ",
+    "file": "faq.md",
+    "children": [
+        {
+            "title": "Including assets in libraries",
+            "file": "faq/assets.md"
+        }
+    ]
+  }
+]

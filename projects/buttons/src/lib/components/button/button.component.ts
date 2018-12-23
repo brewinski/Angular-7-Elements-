@@ -1,15 +1,18 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-
+import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'cns-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class ButtonComponent implements OnInit {
-  @Input() public name: string;
-  @Input() public type: 'primary' | 'secondary' | 'default' = 'default';
-  @Input() public disabled = false;
+export class ButtonComponent {
+  @Input() name: string;
+  @Input() type: 'primary' | 'secondary' | 'default' = 'default';
+  @Input() disabled = false;
+  @Input() action: 'button' | 'submit' = 'button';
 
-  ngOnInit() { }
+  @Output() btnFocus: EventEmitter<any> = new EventEmitter();
+  @Output() btnBlur: EventEmitter<any> = new EventEmitter();
+  @Output() btnClick: EventEmitter<any> = new EventEmitter();
+  @Output() btnDoubleClick: EventEmitter<any> = new EventEmitter();
 }

@@ -1,0 +1,25 @@
+<form [formGroup]="group">
+  <!-- Standard Component -->
+  <cns-text-input formControlName="text"
+                  [controlName]="text"
+                  ngDefaultControl>
+  </cns-text-input>
+  <!-- Focused Component -->
+  <cns-text-input #focusControl
+                  formControlName="text"
+                  [controlName]="text"
+                  ngDefaultControl>
+  </cns-text-input>
+  <!-- Disabled Component -->
+  <cns-text-input #disableControl
+                  formControlName="text"
+                  ngDefaultControl
+                  [attr.disabled]="disabled">
+  </cns-text-input>
+    <!-- Readonly Component -->
+  <cns-text-input #readonlyControl
+                  formControlName="text"
+                  ngDefaultControl
+                  [attr.readonly]="disabled">
+  </cns-text-input>
+</form>

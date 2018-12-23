@@ -1,5 +1,4 @@
-@import '../styles/global';
-@import '../../../../../'
+@import '../../../../../shared/styles/variables';
 
 :host {
   display: block;
@@ -10,6 +9,7 @@
   .display-small {
     color: $color-ink;
     text-transform: capitalize;
+    margin: 0;
   }
 
   .display-xlarge {
@@ -63,4 +63,12 @@
   .subdued {
     color: $color-subdued;
   }
+}
+
+.normal-font-weight {
+  font-weight: normal;
+}
+
+.bold-font-weight {
+  font-weight: bold;
 }

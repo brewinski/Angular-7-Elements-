@@ -1,40 +1,90 @@
-# Angular-7-Elements-Desing-System
+# Canstar Elements Design System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-## Setup
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Run `git clone https://github.com/brewinski/Angular-7-Elements-POC.git` then into `cd ./Angular-7-Elements-POC`
+This project is to test and demonstrate a the usefulness a design system for developing and maintaining the Canstars websites.
+  - The system uses Angular 7 libraries to create modular web components which can be imported into projects.
+  - It uses web components and shadow dom.
+  - It implements various web elements to standardise pages use of features like titles & text, buttons, form inputs and common layouts.
+  - Inspiration has been taken from [Polaris](https://polaris.shopify.com/components/get-started) by Shopify.
 
-Run `nvm use` if you don't have the required node version installed run `nvm install`
+## Usage
+### Installation & Serving
 
-Installl the latest version of angular CLI globally `npm install -g @angular/cli@^7.1.0`
+Canstar Elements Design System requires [Node.js](https://nodejs.org/) v10.14.2 to run.
 
-Run `npm install`
+First download the repo & setup node, install Angular CLI globally & dependencies.
 
-The library needs to be built into the `dist` folder. building the library allows it to behave as if it were an npm package.
+```sh
+$ git clone https://github.com/brewinski/Angular-7-Elements-POC.git
+$ cd ./Angular-7-Elements-POC
+```
 
-To build the library,
+Set up node & install Angular CLI globally.
 
-Run `ng build made-with-love`
+```sh
+$ nvm install && nvm use
+$ npm install -g @angular/cli@^7.1.0 && npm install
+```
 
-Run ng serve
+Install the dependencies and devDependencies and start the server.
 
-## Code scaffolding
+```sh
+$ npm install
+$ npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This will deploy the server to `http://localhost:4200/`.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Running Tests
 
-## Running unit tests
+All tests can be run using the following command.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+$ npm test
+```
 
-## Running end-to-end tests
+You can run specific library tests using:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+$ npm test <library-name>
+```
+
+
+### Code scaffolding
+
+We can use Angular CLI to do a number of helpful things for use. We can create new components:
+
+```sh
+$ ng generate component <component-name>
+```
+
+or
+
+```sh
+$ ng g component <component-name>
+```
+
+The things we can generate include: `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This automatically creates the files, and updates the module files as needed.
+
+We can also generate components for libraries using:
+
+```sh
+$ ng g component components/<component-name> --project=<library-name>
+```
+Make sure the project exits, and that you use the `components/` prefix to ensure all components are generated within a sub folder.
+
+We can generate new libraries using:
+
+```sh
+$ ng generate library <new-library-name>
+```
+This will create a new library in the top level `projects/` folder.
+
 
 ## Build
 

@@ -1,29 +1,28 @@
 import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { createCustomElement } from '@angular/elements';
-
 import { DisplayComponent } from './components/display/display.component';
 import { TitleComponent } from './components/title/title.component';
 import { TextComponent } from './components/text/text.component';
 import { CaptionComponent } from './components/caption/caption.component';
+import { ElementDef } from 'projects/shared/interfaces';
+import { RegisterWebComponents } from 'projects/shared/helpers';
+import { LinksComponent } from './components/links/links.component';
+
+const angularElements: ElementDef[] = [
+  { key: 'cns-display', component: DisplayComponent },
+  { key: 'cns-title', component: TitleComponent },
+  { key: 'cns-text', component: TextComponent },
+  { key: 'cns-caption', component: CaptionComponent },
+  { key: 'cns-link', component: LinksComponent }
+];
 
 @NgModule({
-  declarations: [DisplayComponent, TitleComponent, TextComponent, CaptionComponent],
+  declarations: [CaptionComponent, DisplayComponent, LinksComponent, TextComponent, TitleComponent],
   imports: [CommonModule],
-  entryComponents: [DisplayComponent, TitleComponent, TextComponent, CaptionComponent]
+  entryComponents: [CaptionComponent, DisplayComponent, LinksComponent, TextComponent, TitleComponent]
 })
 export class TitlesAndTextModule {
   constructor(private injector: Injector) {
-    const displayElement = createCustomElement(DisplayComponent, { injector });
-    const titleElement = createCustomElement(TitleComponent, { injector });
-    const textElement = createCustomElement(TextComponent, { injector });
-    const captionElement = createCustomElement(CaptionComponent, { injector });
-
-    customElements.define('cns-display', displayElement);
-    customElements.define('cns-title', titleElement);
-    customElements.define('cns-text', textElement);
-    customElements.define('cns-caption', captionElement);
+    RegisterWebComponents(angularElements, injector);
   }
-
-  ngDoBootstrap() {}
 }

@@ -14,4 +14,13 @@ export class ButtonsComponent implements OnInit {
   ngOnInit() {
   }
 
+  handleClick(event) {
+    if (event.detail === 'submit') {
+      this.onSubmit();
+    }
+  }
+
+  onSubmit() {
+    console.log('submit');
+  }
 }

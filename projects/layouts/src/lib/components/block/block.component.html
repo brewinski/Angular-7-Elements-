@@ -1,0 +1,11 @@
+<section [class.top-triangle]="triangle === 'both'">
+  <div
+    [class.left]="alignment === 'left'"
+    [class.centre]="alignment === 'centre'"
+    [class.right]="alignment === 'right'">
+    <slot name="heading"></slot>
+  </div>
+  <div>
+    <slot name="body"></slot>
+  </div>
+</section>

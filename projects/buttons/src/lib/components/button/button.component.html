@@ -1,7 +1,11 @@
 <button
-  type="button"
+  type="{{ action }}"
   [disabled]="disabled"
   [class.primary]="type === 'primary'"
-  [class.secondary]="type === 'secondary'">
+  [class.secondary]="type === 'secondary'"
+  (focus)="btnFocus.emit()"
+  (blur)="btnBlur.emit()"
+  (click)="btnClick.emit(action)"
+  (dblclick)="btnDoubleClick.emit()">
   {{ name }}
 </button>

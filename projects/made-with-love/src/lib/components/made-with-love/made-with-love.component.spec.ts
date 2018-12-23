@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MadeWithLoveComponent } from './made-with-love.component';
 
-xdescribe('MadeWithLoveComponent', () => {
+describe('MadeWithLoveComponent', () => {
   let component: MadeWithLoveComponent;
   let fixture: ComponentFixture<MadeWithLoveComponent>;
 

@@ -8,7 +8,9 @@
     "watch": "nodemon -w ./projects -w ./src -e ts --exec 'ng build made-with-love; ng build buttons; ng build titles-and-text; ng serve'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc:styled": "compodoc projects -p tsconfig.json -y canstar_theme/; compodoc -s",
+    "compodoc": "compodoc projects -p tsconfig.json -c .compodocrc.json; compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "@angular/router": "~7.1.0",
     "core-js": "^2.5.4",
     "document-register-element": "^1.7.2",
+    "prismjs": "^1.15.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -40,10 +43,10 @@
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.1",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
+    "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage-istanbul-reporter": "^2.0.4",
+    "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^4.2.0",
     "nodemon": "^1.18.9",

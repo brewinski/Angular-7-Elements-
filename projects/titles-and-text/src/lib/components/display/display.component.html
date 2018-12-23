@@ -1,8 +1,70 @@
-<p
-  [class.display-xlarge]="typestyle === 'xlarge'"
-  [class.display-large]="typestyle === 'large'"
-  [class.display-medium]="typestyle === 'medium'"
-  [class.display-small]="typestyle === 'small'"
-  [class.subdued]="variation === 'subdued'">
-  <ng-content></ng-content>
-</p>
+<ng-template #content><slot></slot></ng-template>
+
+<ng-container [ngSwitch]="element">
+  <h1
+    *ngSwitchCase="'h1'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h1>
+  <h2
+    *ngSwitchCase="'h2'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h2>
+  <h3
+    *ngSwitchCase="'h3'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h3>
+  <h4
+    *ngSwitchCase="'h4'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h4>
+  <h5
+    *ngSwitchCase="'h5'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h5>
+  <h6
+    *ngSwitchCase="'h6'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></h6>
+  <p
+    *ngSwitchCase="'p'"
+    [class.display-xlarge]="size === 'xlarge'"
+    [class.display-large]="size === 'large'"
+    [class.display-medium]="size === 'medium'"
+    [class.display-small]="size === 'small'"
+    [class.subdued]="variation === 'subdued'"
+    [class.normal-font-weight]="weight === 'normal'"
+    [class.bold-font-weight]="weight === 'bold'"><ng-content *ngTemplateOutlet="content"></ng-content></p>
+</ng-container>
+
+
+
