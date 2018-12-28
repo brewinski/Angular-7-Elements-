@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { FontTransformation, Variation } from 'projects/shared/interfaces/types.type';
 
 @Component({
   selector: 'cns-text',
@@ -6,11 +7,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./text.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TextComponent implements OnInit {
-  @Input() public variation: 'body' | 'subdued' | 'disabled' | 'reversed' = 'body';
-  @Input() public transform: 'capitalize' | 'uppercase' | 'lowercase' | 'italic' | 'none' = 'none';
-
-  ngOnInit() {
-  }
-
+export class TextComponent {
+  @Input() public variation: Variation = 'normal';
+  @Input() public transform: FontTransformation = 'none';
 }

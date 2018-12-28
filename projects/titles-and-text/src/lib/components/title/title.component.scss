@@ -2,48 +2,48 @@
 
 :host {
   display: block;
-}
 
-.title-heading,
-.title-subheading {
-  color: $color-ink;
-}
-
-.title-heading.subdued,
-.title-subheading.subdued {
-  color: $color-subdued;
-}
-
-.title-heading {
-  font-family: $font-bold;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: bolder;
-  text-transform: capitalize;
-
-  @media (min-width: 420px) {
-    font-size: 16px;
-    line-height: 24px;
+  .title-heading,
+  .title-subheading {
+    color: $color-ink;
   }
-}
 
-.title-subheading {
-  font-family: $font-bold;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: bolder;
-  text-transform: uppercase;
-
-  @media (min-width: 420px) {
-    font-size: 13px;
+  .title-heading {
+    font-family: $font-bold;
+    font-size: 17px;
     line-height: 24px;
+    font-weight: bolder;
+    text-transform: capitalize;
+
+    @media (min-width: 420px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
-}
 
-.normal {
-  font-weight: normal;
-}
+  .title-subheading {
+    font-family: $font-bold;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
 
-.bold {
-  font-weight: bold;
+    @media (min-width: 420px) {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+
+  .subdued {
+    color: $color-subdued;
+  }
+
+  .normal {
+    font-weight: normal;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
 }

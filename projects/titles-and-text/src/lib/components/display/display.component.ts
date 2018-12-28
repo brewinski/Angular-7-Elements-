@@ -1,6 +1,9 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { DisplaySize, Element, FontWeight, Variation } from 'projects/shared/interfaces/types.type';
 
 /**
+ * A text element designed to draw attention as a large heading or title.
+ *
  * Example of usage:
  * <example-url>http://localhost:4200/titles-and-text</example-url>
  */
@@ -11,8 +14,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class DisplayComponent {
-  @Input() public size: 'xlarge' | 'large' | 'medium' | 'small' = 'large';
-  @Input() public element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' = 'p';
-  @Input() public variation: 'default' | 'subdued' = 'default';
-  @Input() public weight: 'normal' | 'bold' = 'bold';
+  @Input() public size: DisplaySize = 'large';
+  @Input() public element: Element = 'p';
+  @Input() public variation: Variation = 'normal';
+  @Input() public weight: FontWeight = 'bold';
 }

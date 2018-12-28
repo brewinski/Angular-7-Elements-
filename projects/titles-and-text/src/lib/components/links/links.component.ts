@@ -1,12 +1,14 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { FontColours, TextSizing } from 'projects/shared/interfaces/types.type';
 
 @Component({
-  selector: 'lib-links',
+  selector: 'cns-links',
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class LinksComponent {
-  @Input() href = '';
-  @Input() color: 'aqua' | 'grey' = 'aqua';
+  @Input() public href = '';
+  @Input() public size: TextSizing = 'normal';
+  @Input() public color: FontColours = 'aqua';
 }

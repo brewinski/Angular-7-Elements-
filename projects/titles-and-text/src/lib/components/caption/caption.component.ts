@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Variation } from 'projects/shared/interfaces/types.type';
 
 @Component({
   selector: 'cns-caption',
@@ -6,10 +7,6 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./caption.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class CaptionComponent implements OnInit {
-  @Input() public variation: 'default' | 'subdued' = 'default';
-
-  ngOnInit() {
-  }
-
+export class CaptionComponent {
+  @Input() public variation: Variation = 'normal';
 }

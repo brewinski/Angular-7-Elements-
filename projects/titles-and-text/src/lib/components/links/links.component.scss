@@ -2,24 +2,27 @@
 
 :host {
   display: block;
-}
 
-a {
-  font-size: 18px;
-  line-height: 18px;
-  color: $colour-font-link;
-  text-decoration: none;
-  font-family: $font-regular;
-}
+  a {
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    font-family: $font-regular;
+  }
 
-.big {
+  .big {
 
-}
+  }
 
-.small {
+  .small {
 
-}
+  }
 
-.greyscale {
-  color: $color-font-navbar;
+  .aqua {
+    color: $colour-font-link;
+  }
+
+  .greyscale {
+    color: $color-font-navbar;
+  }
 }
