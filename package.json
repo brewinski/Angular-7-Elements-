@@ -10,9 +10,7 @@
     "test:coverage": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compodoc:styled": "compodoc projects -p tsconfig.json -y canstar_theme/; compodoc -s",
-    "compodoc": "compodoc projects -p tsconfig.json -c .compodocrc.json; compodoc -s",
-    ""
+    "doc": "compodoc projects -p tsconfig.json -c .compodocrc.json; compodoc -s --port 9696",
     "coverage:serve": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "private": true,
