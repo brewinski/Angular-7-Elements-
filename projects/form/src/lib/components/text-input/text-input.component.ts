@@ -62,7 +62,7 @@ export class TextInputComponent implements ControlValueAccessor {
 
   @Output() change = new EventEmitter();
 
-  @ViewChild(DefaultValueAccessor) valueAccessor: DefaultValueAccessor;
+  @ViewChild(DefaultValueAccessor, { static: true }) valueAccessor: DefaultValueAccessor;
 
   public writeValue(obj: any): void {
     this.valueAccessor.writeValue(obj);

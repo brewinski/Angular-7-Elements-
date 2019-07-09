@@ -11,8 +11,8 @@ export class AppComponent  implements AfterViewInit {
 
   public group: FormGroup;
 
-  @ViewChild('focusControl') focusControl: ElementRef;
-  @ViewChild('disableControl') disableControl: ElementRef;
+  @ViewChild('focusControl', { static: false }) focusControl: ElementRef;
+  @ViewChild('disableControl', { static: false }) disableControl: ElementRef;
 
   public disabled = true;
   public readonly = true;

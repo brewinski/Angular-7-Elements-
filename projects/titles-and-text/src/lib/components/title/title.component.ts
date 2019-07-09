@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, ViewEncapsulation, ViewChild, TemplateRef, ElementRef } from '@angular/core';
-import { template } from '@angular/core/src/render3';
 
 @Component({
   selector: 'lib-title',
@@ -13,7 +12,7 @@ export class TitleComponent implements OnInit {
   @Input() public variation: 'default' | 'subdued' = 'default';
   @Input() public weight: 'normal' | 'bolder' | 'bold' = 'bolder';
 
-  @ViewChild('content') tempate: TemplateRef<ElementRef>;
+  @ViewChild('content', { static: true }) tempate: TemplateRef<ElementRef>;
 
   html = '<h1>testing</h1>';
 
